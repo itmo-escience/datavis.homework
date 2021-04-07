@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>HW2</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <script src="js/index.js" async></script>
+    </head>
+
+    <body>
+        <div class="body">
+            <h1>Datavis homework</h1>
+            <div class="legend row">
+                <div class="row legend-item">
+                    <div class="legend-circle" style="background-color: #DD4949;"></div>
+                    <div>Asia</div>
+                </div>
+                <div class="row legend-item">
+                    <div class="legend-circle" style="background-color: #39CDA1;"></div>
+                    <div>Europe</div>
+                </div>
+                <div class="row legend-item">
+                    <div class="legend-circle" style="background-color: #FD710C;"></div>
+                    <div>Africa</div>
+                </div>
+                <div class="row legend-item">
+                    <div class="legend-circle" style="background-color: #A14BE5;"></div>
+                    <div>Americas</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="block first-child">
+                    <h1 id="year" class="year">2000</h1>
+                    <div class="row space-between">
+                        <svg id="scatter-plot"></svg>
+                        <div class="side-pan">
+                            <div class="selectors">
+                                <div class="select">
+                                    <div class="lable">radius:</div>
+                                    <div>
+                                        <select id='radius'>
+                                            <option>gdp</option>
+                                            <option>child-mortality</option>
+                                            <option>fertility-rate</option>
+                                            <option>life-expectancy</option>
+                                            <option>population</option>
+                                        </select>    
+                                    </div>
+                                </div>
+                                <div class="select">
+                                    <div class="lable">x:</div>
+                                    <div>
+                                        <select id='x'>
+                                            <option>fertility-rate</option>
+                                            <option>gdp</option>
+                                            <option>child-mortality</option>
+                                            <option>life-expectancy</option>
+                                            <option>population</option>
+                                        </select>    
+                                    </div>
+                                </div>
+                                <div class="select">
+                                    <div class="lable">y:</div>
+                                    <div>
+                                        <select id='y'>
+                                            <option>child-mortality</option>
+                                            <option>gdp</option>
+                                            <option>fertility-rate</option>
+                                            <option>life-expectancy</option>
+                                            <option>population</option>
+                                        </select>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="line-chart-container row space-between">
+                        <div id="country-name" class="country-name"></div>
+                        <svg id="line-chart"></svg>
+                        <div id="line-selector" class="side-pan" style="display: none;">
+                            <div class="select">
+                                <div class="lable">param:</div>
+                                <div>
+                                    <select id='p'>
+                                        <option>child-mortality</option>
+                                        <option>gdp</option>
+                                        <option>fertility-rate</option>
+                                        <option>life-expectancy</option>
+                                        <option>population</option>
+                                    </select>    
+                                </div>
+                            </div>    
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="block">
+                    <div class="side-pan">
+                        <div class="select">
+                            <div class="lable">param:</div>
+                            <div>
+                                <select id='param'>
+                                    <option>child-mortality</option>
+                                    <option>gdp</option>
+                                    <option>fertility-rate</option>
+                                    <option>life-expectancy</option>
+                                    <option>population</option>
+                                </select>    
+                            </div>
+                        </div>    
+                    </div>
+                    <svg id="bar-chart"></svg>
+                </div>
+            </div>    
+        </div>
+
+        <div class="range-control">
+            <input id="range" type="range" class="slider" min="1800" max="2020" value="2000"/>
+        </div>
+        
+        
+
+    </body>
+
+</html>

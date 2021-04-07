@@ -48,3 +48,5 @@
 - Внести нобходимые изменения;
 - Настроить Github Pages в настройках своего репозитория;
 - Прислать ссылку на страницу решения на Github Pages в тг(@PapaKKKarlo).
+
+Для отладки можно запустить [локальный сервер на python](https://developer.mozilla.org/ru/docs/Learn/Common_questions/set_up_a_local_testing_server).
